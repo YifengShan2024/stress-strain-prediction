@@ -10,33 +10,35 @@ This repository implements the **Stress-Strain Adaptive Predictive Model (SSAPM)
 - **Flexible Data Pipeline**: Supports CSV-based datasets with train/validation/test splits.
 - **Visualization Tools**: Generate comparison plots for true and predicted values.
 
----
 
 ## File Structure
-```plaintext
-.
-├── README.md                      # Project documentation
-├── requirements.txt               # Dependencies
-├── main.py                        # Entry point for training, validation, and testing
-├── config.yaml                    # Configuration file for model and data
-├── src/
-│   ├── models/                    # Model-related code
-│   │   ├── ssapm.py               # Stress-Strain Adaptive Predictive Model
-│   │   ├── attention.py           # Hybrid attention module
-│   │   ├── loss_functions.py      # Custom loss functions
-│   │   └── optimization.py        # Optimizer configurations
-│   ├── utils/                     # Utility functions
-│   │   ├── visualization.py       # Visualization tools
-│   │   └── logging.py             # Logging utilities
-├── data/
-│   ├── raw/                       # Raw datasets
-│   └── processed/                 # Preprocessed datasets
-├── tests/                         # Unit tests
-│   ├── test_models.py             # Tests for model initialization and forward pass
-│   ├── test_data_processing.py    # Tests for data loading and augmentation
-│   └── test_training.py           # Tests for training pipeline
 
----
+### Root Directory
+- **README.md**: Project documentation.
+- **requirements.txt**: Dependencies.
+- **main.py**: Entry point for training, validation, and testing.
+- **config.yaml**: Configuration file for model and data.
+
+### `src/` Directory
+#### Models
+- **ssapm.py**: Stress-Strain Adaptive Predictive Model.
+- **attention.py**: Hybrid attention module.
+- **loss_functions.py**: Custom loss functions.
+- **optimization.py**: Optimizer configurations.
+
+#### Utilities
+- **visualization.py**: Visualization tools.
+- **logging.py**: Logging utilities.
+
+### `data/` Directory
+- **raw/**: Raw datasets.
+- **processed/**: Preprocessed datasets.
+
+### `tests/` Directory
+- **test_models.py**: Tests for model initialization and forward pass.
+- **test_data_processing.py**: Tests for data loading and augmentation.
+- **test_training.py**: Tests for training pipeline.
+
 
 ## Usage
 
@@ -86,6 +88,24 @@ Use plot_predictions() from utils/visualization.py to visualize true vs. predict
 Trained Model: Saved in outputs/models/.
 Logs: Training and test logs in outputs/logs/.
 Visualizations: True vs. predicted plots in outputs/results/.
+
+
+## Contributions
+This work introduces several key contributions to structural mechanics and computational modeling:
+
+Hybrid Attention Design: Integrates domain-specific feature attention with deep learning, improving interpretability and performance for stress-strain predictions.
+Custom Loss Framework: Combines mechanistic principles with data-driven losses to enforce physical realism in predictions.
+Efficient Data Processing: Implements augmentation techniques and a flexible pipeline for multi-sensor data integration.
+Modular Framework: Provides a reusable structure for extensions in other applications, such as material failure prediction or real-time simulations.
+
+## Future Work
+This project opens up several avenues for future research and development:
+
+Real-Time Adaptability: Incorporate dynamic optimization strategies to adapt the model to changing material properties in real-time.
+Extended Sensor Integration: Explore additional data sources, such as acoustic and thermal sensors, for multi-modal fusion.
+Scalability: Improve the computational efficiency for large-scale datasets and 3D modeling scenarios.
+Explainability: Develop tools to interpret attention mechanisms, making the model outputs more accessible to domain experts.
+Transfer Learning: Adapt the model for applications in related domains, such as biomechanics or aerospace engineering.
 
 ##  License
 This project is licensed under the MIT License.
