@@ -1,0 +1,20 @@
+data:
+  train_path: "data/train.pt"
+  val_path: "data/val.pt"
+  batch_size: 32
+
+model:
+  input_size: 128
+  hidden_size: 256
+  output_size: 64
+
+train:
+  epochs: 10
+  lr: 0.001
+
+validate:
+  metrics: ["accuracy", "loss"]
+
+outputs:
+  model_path: "outputs/models"
+  log_path: "outputs/logs"
